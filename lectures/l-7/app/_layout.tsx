@@ -1,0 +1,60 @@
+// app/_layout.tsx
+
+import { Stack } from "expo-router";
+import { Pressable, Text } from "react-native";
+// Flytter Logo til en egen komponent
+import Logo from "../components/Logo";
+import { Theme } from "../constants/theme";
+
+export default function RootLayout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          // Sikrer konsistent styling av headeren
+          backgroundColor: Theme.primary,
+        },
+        headerTintColor: "#fff",
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+      }}
+    >
+      <Stack.Screen
+        name="index"
+        options={{
+          headerTitle: () => <Logo />,
+          title: "Studentapp",
+          headerRight: () => (
+            <Pressable
+              onPress={() => alert("Dette er en handling!")}
+              style={{
+                backgroundColor: Theme.secondary,
+                padding: 10,
+                borderRadius: 5,
+                marginRight: 10,
+              }}
+            >
+              <Text style={{ color: "#fff" }}>Handling</Text>
+            </Pressable>
+          ),
+          // Skjuler tilbakeknappen for denne skjermen, da "Redirect" fra Tabs på lavere nivå
+          // Fører til at tilbakeknappen vises grunnet at Stacken får en ny skjerm
+          headerBackVisible: false,
+        }}
+      />
+      <Stack.Screen
+        name="about"
+        options={{
+          title: "Om appen",
+        }}
+      />
+      <Stack.Screen
+        name="(admin)"
+        options={{
+          headerShown: false,
+        }}
+      />
+    </Stack>
+  );
+}
