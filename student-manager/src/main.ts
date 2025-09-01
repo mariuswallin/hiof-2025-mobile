@@ -51,6 +51,11 @@ const addStudent = (student: Student) => {
   students.push(student);
 };
 
+// addStudent({
+//   id: 1,
+//   name: "test"
+// })
+
 const addSubject = (
   subject: Pick<Subject, "name">,
   students: number[],
@@ -58,7 +63,7 @@ const addSubject = (
 ) => {
   const subjectData: Subject = {
     id: subjects.length + 1,
-    name: subject.name || `Subject ${subjects.length + 1}`,
+    name: subject.name,
     students,
     grades,
   };
