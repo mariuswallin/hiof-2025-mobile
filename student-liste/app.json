@@ -2,6 +2,7 @@
   "expo": {
     "name": "student-list",
     "slug": "student-list",
+    "jsEngine": "hermes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

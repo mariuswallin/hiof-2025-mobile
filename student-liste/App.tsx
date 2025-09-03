@@ -1,5 +1,3 @@
-import { StatusBar, StyleSheet } from "react-native";
-
 import type { Student } from "./components/StudentItem";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
