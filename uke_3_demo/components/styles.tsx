@@ -15,6 +15,13 @@ const productCardStyles = {
   elevation: 5,
 } as const;
 
+const productPriceStyles = {
+  fontSize: 16,
+  fontWeight: "bold",
+  marginBottom: 10,
+} as const;
+
 export const productStyles = StyleSheet.create({
   card: productCardStyles,
+  price: productPriceStyles,
 });
