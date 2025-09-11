@@ -1,5 +1,6 @@
 import { Text } from "react-native";
+import type { Product } from "../types";
 
-export default function ProductName() {
-  return <Text>Product Name</Text>;
+export default function ProductName({ name }: Pick<Product, "name">) {
+  return <Text>{name}</Text>;
 }

@@ -6,11 +6,18 @@ import BuyButton from "./BuyButton";
 import { Image } from "expo-image";
 
 import MyImage from "../assets/img.jpg";
+import type { Product } from "../types";
 
-export default function ProductCard() {
+type Props = {
+  product: Product;
+};
+
+export default function ProductCard(props: Props) {
+  const { product } = props;
+
   return (
     <View style={productStyles.card}>
-      <ProductName />
+      <ProductName name={product.name} />
       <ProductPrice />
       <Image source={MyImage} style={{ width: 200, height: 200 }} />
       <BuyButton />
