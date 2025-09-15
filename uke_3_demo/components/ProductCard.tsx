@@ -18,7 +18,7 @@ export default function ProductCard(props: Props) {
   return (
     <View style={productStyles.card}>
       <ProductName name={product.name} />
-      <ProductPrice />
+      <ProductPrice price={product.price} />
       <Image source={MyImage} style={{ width: 200, height: 200 }} />
       <BuyButton />
     </View>
