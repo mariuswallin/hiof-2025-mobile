@@ -28,6 +28,7 @@ export default function StudentList({ students }: { students: Student[] }) {
           </StudentCard>
         )}
         keyExtractor={(item) => item.id.toString()}
+        ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
       />
     </View>
   );

@@ -5,7 +5,7 @@ const cardWidth = width * 0.9;
 
 const productCardStyles = {
   width: cardWidth,
-  backgroundColor: "red",
+  backgroundColor: "white",
   borderRadius: 10,
   overflow: "hidden",
   shadowColor: "#000",

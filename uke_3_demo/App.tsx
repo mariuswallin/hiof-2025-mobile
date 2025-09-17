@@ -1,14 +1,6 @@
-import { StyleSheet, View } from "react-native";
-import ProductCard from "./components/ProductCard";
 import { type Product } from "./types";
 import ProductList from "./components/ProductList";
-
-const product: Product = {
-  id: "1",
-  name: "My new product",
-  price: 29.99,
-  description: "This is a sample product description.",
-};
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const products: Product[] = [
   {
@@ -29,22 +21,18 @@ const products: Product[] = [
     price: 19.99,
     description: "This is the third sample product description.",
   },
+  {
+    name: "Produkt 4",
+    price: 400,
+    description: "Dette er produkt 4",
+    id: "4",
+  },
 ];
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <ProductCard product={product} /> */}
+    <SafeAreaView style={{ flex: 1, width: "100%", paddingTop: 10 }}>
       <ProductList products={products} />
-    </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
