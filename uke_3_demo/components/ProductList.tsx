@@ -5,20 +5,13 @@ import ProductCard from "./ProductCard";
 
 export default function ProductList({ products }: { products: Product[] }) {
   return (
-    <ScrollView contentContainerStyle={{ gap: 25 }}>
+    <ScrollView
+      contentContainerStyle={{ gap: 25 }}
+      style={{ flex: 1, width: "100%" }}
+    >
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
-  },
-});

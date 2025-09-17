@@ -1,6 +1,6 @@
 import { type Product } from "./types";
 import ProductList from "./components/ProductList";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 const products: Product[] = [
   {
@@ -31,8 +31,10 @@ const products: Product[] = [
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1, width: "100%", paddingTop: 10 }}>
-      <ProductList products={products} />
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <ProductList products={products} />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
