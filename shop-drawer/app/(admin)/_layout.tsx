@@ -18,7 +18,7 @@ function CustomDrawerContent(props: DrawerContentComponentProps) {
       <DrawerItem
         label="Back"
         icon={() => <Ionicons name="arrow-back" />}
-        onPress={() => router.push("/")}
+        onPress={() => router.dismissAll()}
       />
     </DrawerContentScrollView>
   );

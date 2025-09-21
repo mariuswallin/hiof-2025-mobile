@@ -6,10 +6,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Link href="/(settings)" style={styles.link}>
-        <Text>Go to settings</Text>
+        <Text style={styles.linkText}>Go to settings</Text>
       </Link>
       <Link href="/(admin)" style={styles.link}>
-        <Text>Go to admin</Text>
+        <Text style={styles.linkText}>Go to admin</Text>
       </Link>
     </View>
   );
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 70,
+    gap: 10,
+    width: "100%",
+    alignItems: "center",
   },
   title: {
     fontSize: 24,
@@ -41,8 +44,8 @@ const styles = StyleSheet.create({
   link: {
     backgroundColor: "#002266",
     padding: 15,
-    borderRadius: 8,
     alignItems: "center",
+    width: "90%",
   },
   linkText: {
     color: "white",
