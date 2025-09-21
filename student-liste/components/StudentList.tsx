@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import Button from "./Button";
 import { StudentCard } from "./StudentCard";
 import StudentItem, { type Student } from "./StudentItem";
@@ -23,12 +23,17 @@ export default function StudentList({ students }: { students: Student[] }) {
         renderItem={({ item }) => (
           <StudentCard>
             <Button onPress={() => console.log(item)}>
+              <Text>Studentdata</Text>
               <StudentItem student={item} />
             </Button>
           </StudentCard>
         )}
         keyExtractor={(item) => item.id.toString()}
-        ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+        ItemSeparatorComponent={() => (
+          <View style={{ height: 10 }}>
+            <Text>----</Text>
+          </View>
+        )}
       />
     </View>
   );
