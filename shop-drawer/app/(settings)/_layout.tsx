@@ -4,14 +4,14 @@ export default function Layout() {
   return (
     <Drawer>
       <Drawer.Screen
-        name="index" // This is the name of the page and must match the url from root
+        name="index"
         options={{
           drawerLabel: "Settings",
           title: "Settings",
         }}
       />
       <Drawer.Screen
-        name="profile" // This is the name of the page and must match the url from root
+        name="profile"
         options={{
           drawerLabel: "User",
           title: "Profile",

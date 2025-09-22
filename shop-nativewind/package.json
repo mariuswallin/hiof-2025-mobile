@@ -12,14 +12,21 @@
     "expo": "~54.0.10",
     "expo-image": "~3.0.8",
     "expo-status-bar": "~3.0.8",
+    "nativewind": "5.0.0-preview.0",
     "react": "19.1.0",
     "react-native": "0.81.4",
+    "react-native-css": "^3.0.0",
+    "react-native-reanimated": "~4.1.2",
     "react-native-safe-area-context": "5.6.1",
     "zod": "^4.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
+    "@tailwindcss/postcss": "^4.1.13",
     "@types/react": "~19.1.13",
+    "postcss": "^8.5.6",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.13",
     "typescript": "~5.9.2"
   },
   "private": true
