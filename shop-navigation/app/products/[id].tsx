@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { useLocalSearchParams, Link } from "expo-router";
 import { products } from "../../data/products";
@@ -21,6 +21,16 @@ const EmptyProduct = () => {
 export default function StudentDetailScreen() {
   // Bruk useLocalSearchParams for å hente ut ID-parameteren fra URL-en
   const { id } = useLocalSearchParams();
+
+  // useEffect(() => {
+  //   // Logikk for å hente studentdetaljer basert på ID
+  //   const fetchProduct = async () => {
+  //     const data = await fetch(`https://api.example.com/products/${id}`);
+  //     const json = await data.json();
+  //     setData(json);
+  //   }
+  //   fetchProduct()
+  // }, [id]);
 
   // Finn produktet med den aktuelle ID-en
   const product = products.find((s) => s.id === id);

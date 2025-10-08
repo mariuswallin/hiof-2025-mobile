@@ -2,7 +2,7 @@ import type { Student } from "./components/StudentItem";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import StudentList from "./components/StudentList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, Text } from "react-native";
 
 export default function App() {
@@ -10,6 +10,10 @@ export default function App() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
+
+  useEffect(() => {
+    fetchStudents();
+  }, []);
 
   const fetchStudents = async () => {
     try {
